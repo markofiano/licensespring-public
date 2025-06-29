@@ -1,0 +1,14 @@
+replicaCount: 3
+image:
+  repository: quay.io/coreos/etcd
+  pullPolicy: IfNotPresent
+  tag: v3.5.11
+service:
+  type: ClusterIP
+  port: 80
+persistence:
+  enabled: true
+  storageClass: default
+  accessModes:
+    - ReadWriteOnce
+  size: 1Gi

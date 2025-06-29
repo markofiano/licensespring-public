@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: aggregator
+spec:
+  containers:
+    - name: aggregator
+      image: acrls.azurecr.io/ping-service:latest
+      command: ["python"]
+      args: ["aggregator.py"]
+      imagePullPolicy: Always
+  restartPolicy: Never

@@ -1,0 +1,8 @@
+replicaCount: 2
+image:
+  repository: acrls.azurecr.io/ping-service
+  tag: latest
+  pullPolicy: Always
+service:
+  type: ClusterIP
+  port: 5000
